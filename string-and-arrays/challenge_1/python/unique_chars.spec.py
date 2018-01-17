@@ -24,6 +24,14 @@ class TestUniqueChars(unittest.TestCase):
     self.assertEqual(self.uniqueChars.withBitAnd('alne'), True)
     self.assertEqual(self.uniqueChars.withBitAnd('alneçç'), False)
     self.assertEqual(self.uniqueChars.withBitAnd('ààlne'), False)
+
+
+    self.assertEqual(self.uniqueChars.withAuxArr(None), False)
+    self.assertEqual(self.uniqueChars.withAuxArr(''), True)
+    self.assertEqual(self.uniqueChars.withAuxArr('alane'), False)
+    self.assertEqual(self.uniqueChars.withAuxArr('alne'), True)
+    self.assertEqual(self.uniqueChars.withAuxArr('alneçç'), False)
+    self.assertEqual(self.uniqueChars.withAuxArr('ààlne'), False)
        
 
 if __name__ == '__main__':

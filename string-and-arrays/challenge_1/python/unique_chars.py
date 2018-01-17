@@ -44,8 +44,8 @@ class UniqueChars():
       return False
     
     for i in range(len(string)):
-      for j in range(len(string) - 1):
-        if (string[i] == string[j + i]):
+      for j in range(len(string) - 1 - i):
+        if (string[i] == string[j + 1 + i]):
           return False;
     return True
     
