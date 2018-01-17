@@ -35,5 +35,18 @@ class UniqueChars():
       else:
         return False
     return True 
+
+  # Implementacao com bitwise operator AND
+  # Complexidade temporal O(n²)
+  # Complexidade espacial O(1)
+  def withAuxArr(self, string):
+    if (string is None):
+      return False
+    
+    for i in range(len(string)):
+      for j in range(len(string) - 1):
+        if (string[i] == string[j + i]):
+          return False;
+    return True
     
     
