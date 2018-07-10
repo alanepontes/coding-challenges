@@ -1,9 +1,15 @@
 class Util:
   
   @staticmethod
-  def is_invalid_input(*args):
+  def has_none(*args):
     for element in args:
-      if (element is None) or not element:
+      if (element is None):
+        return True
+    return False
+
+  def has_empty_string(*args):
+    for element in args:
+      if not element:
         return True
     return False
 

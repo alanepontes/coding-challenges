@@ -1,4 +1,5 @@
-# challenge_1: if a string contains only unique characters
+from util import Util
+# if a string contains only unique characters
 
 class UniqueChars():
   # Implementacao com set()
@@ -18,13 +19,13 @@ class UniqueChars():
   # Complexidade temporal O(n)
   # Complexidade espacial O(n)
   def withHashMapLookup(self, string):
-    return not (string is None) and len(self._createHashMap(string)) == len(string) 
+    return not Util.has_none(string) and len(self._createHashMap(string)) == len(string) 
 
   # Implementacao com bitwise operator AND
   # Complexidade temporal O(n)
   # Complexidade espacial O(1)
   def withBitAnd(self, string):
-    if (string is None):
+    if Util.has_none(string):
       return False
     
     accumulator = int(0)
@@ -40,7 +41,7 @@ class UniqueChars():
   # Complexidade temporal O(n²)
   # Complexidade espacial O(1)
   def withAuxArr(self, string):
-    if (string is None):
+    if Util.has_none(string):
       return False
     
     for i in range(len(string)):
