@@ -23,8 +23,7 @@ class TestUniqueChars(unittest.TestCase):
     self.assertEqual(self.uniqueChars.withBitAnd('alane'), False)
     self.assertEqual(self.uniqueChars.withBitAnd('alne'), True)
     self.assertEqual(self.uniqueChars.withBitAnd('alneçç'), False)
-    self.assertEqual(self.uniqueChars.withBitAnd('ààlne'), False)
-
+    self.assertEqual(self.uniqueChars.withBitAnd('~[[lne'), False)
 
     self.assertEqual(self.uniqueChars.withAuxArr(None), False)
     self.assertEqual(self.uniqueChars.withAuxArr(''), True)

@@ -36,7 +36,7 @@ class UniqueChars():
         return False
     return True 
 
-  # Implementacao com bitwise operator AND
+  # Implementacao com aux array
   # Complexidade temporal O(n²)
   # Complexidade espacial O(1)
   def withAuxArr(self, string):

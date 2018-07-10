@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="2" lines-covered="2" line-rate="1" branches-valid="2" branches-covered="2" branch-rate="1" timestamp="1516301150377" complexity="0" version="0.1">
+  <sources>
+    <source>/home/rivendel/projects/coding-challenges/string-and-arrays/challenge_1/java-script</source>
+  </sources>
+  <packages>
+    <class name="uniqueChars.js" filename="uniqueChars.js" line-rate="1" branch-rate="1">
+      <methods>
+        <method name="(anonymous_0)" hits="5" signature="()V">
+          <lines>
+            <line number="2" hits="5"/>
+          </lines>
+        </method>
+      </methods>
+      <lines>
+        <line number="3" hits="5" branch="true" condition-coverage="100% (2/2)"/>
+        <line number="7" hits="1" branch="false"/>
+      </lines>
+    </class>
+  </packages>
+</coverage>
