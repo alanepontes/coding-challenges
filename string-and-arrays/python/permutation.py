@@ -1,21 +1,13 @@
 from collections import Counter, defaultdict
+from util import Util
 
 class Permutation():
   
-  def _is_invalid_input(self, base_string, permutated):
-    has_none = base_string is None or permutated is None
-    has_empty = not base_string or not permutated
-    if has_none or has_empty:
-      return True
-    return False
-
-  def _has_lenght_notequal(self, base_string, permutated):
-    return len(base_string) != len(permutated)
   # Implementacao com sorted 
   # Complexidade temporal O(n logn) por conta do sorte, em geral
   # Complexidade espacial O(n)
   def is_permutation_sorted(self, base_string, permutated):
-    not_permutation = self._is_invalid_input(base_string, permutated) or self._has_lenght_notequal(base_string, permutated)
+    not_permutation = Util.is_invalid_input(base_string, permutated) or Util.has_lenght_notequal(base_string, permutated)
     if not_permutation:
       return False
     return sorted(base_string) == sorted(permutated)
@@ -24,7 +16,7 @@ class Permutation():
   # Complexidade temporal O(n)
   # Complexidade espacial O(n)
   def is_permutation_counter(self, base_string, permutated):
-    not_permutation = self._is_invalid_input(base_string, permutated) or self._has_lenght_notequal(base_string, permutated)
+    not_permutation = Util.is_invalid_input(base_string, permutated) or Util.has_lenght_notequal(base_string, permutated)
     if not_permutation:
       return False
     return Counter(base_string) == Counter(permutated)
@@ -33,7 +25,7 @@ class Permutation():
   # Complexidade temporal O(n)
   # Complexidade espacial O(n)
   def is_permutation_dict(self, base_string, permutated):
-    not_permutation = self._is_invalid_input(base_string, permutated) or self._has_lenght_notequal(base_string, permutated)
+    not_permutation = Util.is_invalid_input(base_string, permutated) or Util.has_lenght_notequal(base_string, permutated)
     if not_permutation:
       return False
 
